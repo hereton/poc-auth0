@@ -5,7 +5,7 @@
   "scripts": {
     "dev": "concurrently \"next dev\" \"node api-server\"",
     "dev:api": "nodemon api-server",
-    "build": "next build && next export",
+    "build": "next build",
     "start": "concurrently \"next start\" \"node api-server\"",
     "start:api": "node api-server",
     "test": "jest tests --coverage --maxWorkers=10",
