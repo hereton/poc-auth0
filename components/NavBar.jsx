@@ -20,6 +20,7 @@ import AnchorLink from './AnchorLink';
 const NavBar = () => {
   const [isOpen, setIsOpen] = useState(false);
   const { user, isLoading } = useUser();
+  console.log(user)
   const toggle = () => setIsOpen(!isOpen);
 
   return (
