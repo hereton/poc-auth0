@@ -22,7 +22,11 @@ const NavBar = () => {
   const { user, isLoading } = useUser();
   console.log(user)
   const toggle = () => setIsOpen(!isOpen);
-
+  useEffect(() => {
+    if (user === undefined && !isLoading) {
+      window.open("/api/auth/login", "_self");
+    }
+  }, [])
   return (
     <div className="nav-container" data-testid="navbar">
       <Navbar color="light" light expand="md">
